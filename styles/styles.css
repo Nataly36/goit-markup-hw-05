@@ -187,15 +187,16 @@ border-radius: 2px;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
-.backdrop .is-hidden{
+.backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
-.backdrop .is-hidden .modal{
-    transform: translate(-50%, -50%) scale(0.9);
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0.9) ;
 }
 .modal{
     position: absolute;
@@ -477,37 +478,47 @@ border-radius: 2px;
     .customers-laying{
         width: 168px;
         height: 88px;
-        padding-top: 16px;
-        padding-left: 32px;
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .customers-link{
+        padding: 16px 32px;
+        fill: var(--color-icon);
         border: 1px solid var(--color-icon);
         border-radius: 4px;
-        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .customers-laying-icon{
         width: 104px;
         height: 56px;
-        fill: var(--color-icon);
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .customers-laying:focus, .customers-laying:hover{
         
+    }
+    .customers-link:focus, .customers-link:hover{
+        fill: var(--color-link);
         border:1px solid var(--color-link);
         
     }
-    .customers-laying-icon:focus,.customers-laying-icon:hover{
-        fill: var(--color-link);
-    }
+    /* .customers-laying-icon:focus,.customers-laying-icon:hover{
+        
+    } */
 /* footer */
 .stile-footer{
     display: flex;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+    
     background: var(--color-second);
     
 }
+.foter-title-blok{
+    display: inline-block;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 .logo-footer{
-    font-family:'Raleway', sans-serif;
+    
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
@@ -523,7 +534,6 @@ border-radius: 2px;
     color:var(--color-shade);
 }
 .footer-icon-title{
-    font-family: "Roboto";
     font-size: 16px;
     line-height: 1.5;
     font-style: bold;
@@ -531,14 +541,14 @@ border-radius: 2px;
     margin-bottom: 16px;
 }
 .footer-icon-bloc{
-    margin-right: 692px;
+    display: inline-block;
+    max-width: 208px;
+    margin-left: 120px;
     
 }
 
 .icon-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     width: 100%;
     height: 100%;
     line-height: 1;
@@ -546,7 +556,6 @@ border-radius: 2px;
 
 .footer-icon-list{
     display: flex;
-    
     gap: 16px;
     justify-content: space-between;
     align-items: center;
@@ -556,8 +565,8 @@ border-radius: 2px;
 .footer-icon{
     width: 40px;
     height: 40px;
-    
     padding-top: 12px;
+    
     border-radius: 50%;
     background-color:  rgba(255, 255, 255, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
