@@ -136,7 +136,7 @@ border-radius: 2px;
     background: var(--color-second);
     min-width: 1440px;
     text-align: center;
-    padding-top: 192px 15px 192px 15px;
+    
     
     background-image: linear-gradient(to right, rgba(46, 47,66,0.7), rgba(46,47,66,0.7)),  url(../images/people-office.jpg);
     background-position: center;
@@ -166,7 +166,7 @@ border-radius: 2px;
     cursor: pointer;
     padding: 16px 32px;
     border: none;
-    box-shadow:0;
+    
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-but:hover, .hero-but:focus
@@ -268,7 +268,7 @@ border-radius: 2px;
 }
 .proposition-iconmon{
     width:64px ;
-    height:49.09x ;
+    height:49.09px ;
 }
 .proposition-iconas{
     width:61.22px ;
@@ -371,8 +371,7 @@ border-radius: 2px;
     font-family: inherit;
     padding: 12px 24px;
     border: none;
-    box-shadow: 0px;
-    box-shadow: 0px;
+    
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -404,8 +403,8 @@ border-radius: 2px;
         width: 100%;
         height: 100%;
         line-height: 1; 
-        box-shadow:0;
-        border-radius: 0px;
+        
+        
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
     }
@@ -505,9 +504,7 @@ border-radius: 2px;
         border:1px solid var(--color-link);
         
     }
-    /* .customers-laying-icon:focus,.customers-laying-icon:hover{
-        
-    } */
+    
 /* footer */
 .stile-footer{
     display: flex;
@@ -543,7 +540,7 @@ border-radius: 2px;
 .footer-icon-title{
     font-size: 16px;
     line-height: 1.5;
-    font-style: bold;
+    font-style: normal;
     color: var(--color-shade);
     margin-bottom: 16px;
 }
@@ -575,15 +572,10 @@ border-radius: 2px;
     height: 100%;
     line-height: 1; */
 }
-
-
-
-
 .footer-icon{
     width: 24px;
     height: 24px;
 }
-
 
 .footer-icon-link:focus, .footer-icon-link:hover{
     background-color: var(--color-validfields);
